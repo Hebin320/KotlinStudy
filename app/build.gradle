@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.hebin.kotlin.study"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.lzy.net:okgo:2.1.4'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile "org.jetbrains.anko:anko:$anko_version"
+    compile "org.jetbrains.anko:anko-support-v4:$anko_version"
+    compile"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    compile 'com.android.support:appcompat-v7:26.0.0-beta1'
+}
+
+kotlin {
+    experimental {
+        coroutines "warn"
+    }
+}
