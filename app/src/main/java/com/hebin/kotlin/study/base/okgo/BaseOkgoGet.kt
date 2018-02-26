@@ -1,7 +1,6 @@
 package com.zerom.management.base.okgo
 
 import android.content.Context
-import com.hebin.utils.SingletonUtil
 import com.lzy.okgo.OkGo
 import com.lzy.okgo.callback.StringCallback
 import com.lzy.okgo.request.BaseRequest
@@ -25,11 +24,8 @@ import okhttp3.Response
  * Okgo网络请求的通用类，显示、隐藏对话框以及网络（访问后台）出现问题的一致处理
  * 请求成功得到的数据可进行回调给其他Model处理
  */
-open class BaseOkgoGet : SingletonUtil<BaseOkgoGet>() {
+open class BaseOkgoGet {
 
-    override fun newInstance(): BaseOkgoGet {
-        return getInstance() as BaseOkgoGet
-    }
 
     companion object {
         /**

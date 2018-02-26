@@ -18,8 +18,7 @@ class MainActivity : BaseActivity(), UniversalView {
         Mainview().setContentView(this)
         Mainview.btnLoad?.text = "确定"
         Mainview.btnLoad?.setOnClickListener {
-            val presenter: MainPresenter = MainPresenter(this, this)
-            presenter.getData_1()
+            MainPresenter(this, this).getData_1()
         }
     }
 

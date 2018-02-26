@@ -1,7 +1,6 @@
 package com.zerom.management.base.okgo
 
 import android.content.Context
-import com.hebin.utils.SingletonUtil
 import com.lzy.okgo.request.BaseRequest
 import com.zerom.management.mInterface.base.SuccessListener
 import com.zerom.management.mInterface.base.UniversalView
@@ -17,11 +16,8 @@ import com.zerom.management.mInterface.base.UniversalView
  * <p>
  * 说明：
  */
-class BaseOkgoPost : SingletonUtil<BaseOkgoPost>() {
+class BaseOkgoPost  {
 
-    override fun newInstance(): com.zerom.management.base.okgo.BaseOkgoPost {
-        return getInstance()!!
-    }
 
     companion object {
 

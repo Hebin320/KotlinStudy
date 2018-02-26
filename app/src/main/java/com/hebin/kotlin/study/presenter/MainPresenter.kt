@@ -23,14 +23,14 @@ import org.json.JSONObject
  * <p>
  * 说明：
  */
-class MainPresenter(val context: Context, val view: UniversalView) : SuccessListener {
+class MainPresenter(private val context: Context, private val view: UniversalView) : SuccessListener {
 
     companion object {
         val GET_SUCCESS_01 = 1
         val GET_SUCCESS_02 = 2
     }
 
-    val entity: DataEntity = view.getData() as DataEntity
+    private val entity: DataEntity = view.getData() as DataEntity
 
     fun getData_1() {
         if (entity.phone.isEmpty()) {
